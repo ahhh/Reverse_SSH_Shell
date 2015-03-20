@@ -5,10 +5,11 @@ import subprocess
 HOST = '127.0.0.1'
 USERNAME = 'test'
 PASSWORD = 'test'
+PORT = 22
 
 client = paramiko.SSHClient()
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-client.connect(HOST, username=USERNAME, password=PASSWORD)
+client.connect(HOST, port=PORT, username=USERNAME, password=PASSWORD)
 chan = client.get_transport().open_session()
 chan.send('Shell time!')
 while True:
