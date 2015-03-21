@@ -5,3 +5,6 @@ A reverse ssh shell written in python, intended for penetration testers to use a
   - python-dev
   - pycrypto
   - paramiko
+
+#### Moar Info:
+  - http://lockboxx.blogspot.com/2015/03/reverse-ssh-trojan.html
