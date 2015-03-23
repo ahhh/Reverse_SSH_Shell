@@ -9,7 +9,7 @@ PORT = 22
 
 client = paramiko.SSHClient()
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-client.connect(HOST, port=PORT, username=USERNAME, password=PASSWORD)
+client.connect(HOST, port=PORT, username=USERNAME, password=PASSWORD, compress=True)
 chan = client.get_transport().open_session()
 chan.send('Shell time!')
 while True:
